@@ -1,0 +1,94 @@
+﻿@model User
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Profile</h3>
+                </div>
+                <div class="card-body">
+                    <p class="p-rigth">
+                        <a href="#" id="btnEdit" class="btn btn-primary">
+                            <span class="fa fa-edit"> Düzenle</span>
+                        </a>
+                    </p>
+                    <form asp-controller="Home" asp-action="Profile" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Surname"></label>
+                            <input asp-for="Surname" class="form-control" />
+                            <span asp-validation-for="Surname"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IdentityNumber"></label>
+                            <input asp-for="IdentityNumber" class="form-control" />
+                            <span asp-validation-for="IdentityNumber"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone"></label>
+                            <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address"></label>
+                            <input asp-for="Address" class="form-control" />
+                            <span asp-validation-for="Address"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Mail"></label>
+                            <input asp-for="Mail" class="form-control" />
+                            <span asp-validation-for="Mail"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserName"></label>
+                            <input asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password"></span>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CompanyId, "Firma")
+                            @Html.DropDownListFor(model => Model.CompanyId, new SelectList(ViewBag.CompanyId, "Id", "CompanyName",Model.CompanyId),null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StatuId"></label>
+                            <input asp-for="StatuId" class="form-control" />
+                            <span asp-validation-for="StatuId"></span>
+                        </div>
+                        <button style="display:none" type="submit" class="btn btn-primary">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $('input').each(function () {
+        $(this).attr('disabled', true)
+    });
+    $('select').each(function () {
+        $(this).attr('disabled', true)
+    });
+    $('main').css('display', 'none');
+
+    $('#btnEdit').click(function () {
+        $('button').css('display', 'block');
+        $('main').css('display', 'block');
+        $('input').each(function () {
+            $(this).removeAttr('disabled');
+        });
+        $('select').each(function () {
+            $(this).removeAttr('disabled');
+        });
+    })
+</script>

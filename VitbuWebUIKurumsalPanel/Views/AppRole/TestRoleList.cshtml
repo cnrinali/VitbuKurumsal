@@ -1,0 +1,133 @@
+﻿@model SuperAdminRoleViewModel
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <p class="p-rigth">
+                        <a href="/superadmin/roleadd" class="btn btn-primary">
+                            <span class="fa fa-edit"> Yeni</span>
+                        </a>
+                    </p>
+                    <table id="example" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Roles[0].Id)</th>
+                                <th>@Html.DisplayNameFor(model => model.Roles[0].RoleName)</th>
+                                <th>@Html.DisplayNameFor(model => model.Roles[0].Description)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        @for (var i = 0; i < Model.Roles.Count; i++)
+                        {
+                            <tbody>
+
+                                <tr>
+                                    <td id="roleid">@Model.Roles[i].Id</td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="rolename"
+                                               data-id="@Model.Roles[i].Id"
+                                               value="@Model.Roles[i].RoleName"
+                                               asp-for="@Model.Roles[i].RoleName" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="description"
+                                               data-id="@Model.Roles[i].Id"
+                                               value="@Model.Roles[i].Description"
+                                               asp-for="@Model.Roles[i].Description" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%;" />
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="@("#resultmodal" +Model.Roles[i].Id)" href="@("#resultmodal" +Model.Roles[i].Id)">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            View
+                                        </a>
+                                        <a id="editlist" class="btn btn-info btn-sm" data-id="@Model.Roles[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a id="saveList" class="btn btn-info btn-sm" style="display:none;" data-id="@Model.Roles[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Kaydet
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("DeleteRole","AppRole", new { ID = Model.Roles[i].Id})">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@foreach (var rolemodal in (List<Role>)Model.Roles)
+{
+    <div class="modal fade bd-example-modal-lg" id="@("resultmodal" +rolemodal.Id)" tabindex="-1" role="dialog" aria-labelledby="instructionsLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Roller</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body ml-5">
+                    <p>@Html.DisplayNameFor(model => model.Roles[0].RoleName) : @rolemodal.RoleName</p>
+                    <p>@Html.DisplayNameFor(model => model.Roles[0].Description) : @Html.Raw(System.Web.HttpUtility.HtmlDecode(rolemodal.Description))
+                    <p>@Html.DisplayNameFor(model => model.Roles[0].StatuId) : @rolemodal.StatuId</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>$(function () {
+        $('#example').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true,
+        });
+    });
+
+    $('#editlist').on('click', function () {
+        $('#editlist').hide();
+        $('#editlist').attr('')
+        $('#saveList').show();
+        var inputDataId = $(this).data('id');
+        $('input').data('id', inputDataId).removeAttr('readonly');
+    });
+
+    $('#saveList').on('click', function () {
+        var inputDataId = $(this).data('id');
+        var roleName = $('input#rolename').data('id', inputDataId).val();
+        var description = $('input#description').data('id', inputDataId).val();
+        $.post(location.origin + "/superadmin/testroleedit", {
+            Id: $(this).data('id'),
+            RoleName: roleName,
+            Description: description,
+        }, function (data) {
+                if(data == "Başarılı!")
+                    createAlert('', data, 'Düzenleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
+                else
+                    createAlert('Hata',data,'Düzenleme işlemi başarısız şekilde gerçekleşti','danger',true,false,'pageMessages');
+        });
+    })</script>

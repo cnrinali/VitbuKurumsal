@@ -1,0 +1,33 @@
+﻿@model Role
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive p-2">
+                    <form enctype="multipart/form-data" asp-controller="AppRole" asp-action="RoleEdit" method="post">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                        <div class="form-group">
+                            <label asp-for="RoleName"></label>
+                            <input asp-for="RoleName" class="form-control" />
+                            <span asp-validation-for="RoleName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description"></label>
+                            <input asp-for="Description" class="form-control" />
+                            <span asp-validation-for="Description"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StatuId"></label>
+                            <input asp-for="StatuId" class="form-control" />
+                            <span asp-validation-for="StatuId"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a class="btn btn-danger float-right" href="/superadmin/role">Geri Dön</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

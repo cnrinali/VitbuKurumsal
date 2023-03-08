@@ -1,0 +1,52 @@
+﻿@model Vehicle
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive p-2">
+                    <form asp-controller="Vehicle" asp-action="VehicleAdd" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label>Plaka</label>
+                            <input asp-for="VehiclePlate" class="form-control" />
+                            <span asp-validation-for="VehiclePlate"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Araç Km</label>
+                            <input asp-for="VehicleStartKm" class="form-control" />
+                            <span asp-validation-for="VehicleStartKm"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Şasi No</label>
+                            <input asp-for="VehicleChassis" class="form-control" />
+                            <span asp-validation-for="VehicleChassis"></span>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.VehicleBrandId, "Araç Marka")
+                            @Html.DropDownList("VehicleBrandId", null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.VehicleModelId, "Araç Modeli")
+                            @Html.DropDownList("VehicleModelId", null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.VehicleCategoryId, "Araç Kategorisi")
+                            @Html.DropDownList("VehicleCategoryId", null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CompanyId, "Araç Firması")
+                            @Html.DropDownList("CompanyId", null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StatusId"></label>
+                            <input asp-for="StatusId" class="form-control" />
+                            <span asp-validation-for="StatusId"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a class="btn btn-danger float-right" href="/vehicle/vehiclelist">Geri Dön</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

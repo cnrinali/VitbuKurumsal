@@ -1,0 +1,338 @@
+﻿@model SuperAdminRoleViewModel
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <p class="p-rigth">
+                        <a data-toggle="modal" data-target="#postmodel" href="#postmodel" class="btn btn-primary">
+                            <span class="fa fa-edit"> Yeni</span>
+                        </a>
+                    </p>
+                    <table id="example" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].Id)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].Company)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].VehicleCategory)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].StartIlId)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].StartIlceId)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].StartSemtMahId)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].EndIlId)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].EndIlceId)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].EndtSemtMahId)</th>
+                                <th>@Html.DisplayNameFor(model => model.Prices[0].TotalPrice)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < Model.Prices.Count; i++)
+                            {
+                                <tr>
+                                    <td>@Model.Prices[i].Id</td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].CompanyId, new SelectList(ViewBag.CompanyId, "Id", "CompanyName", Model.Prices[i].CompanyId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "company", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].VehicleCategoryId, new SelectList(ViewBag.VehicleCategoryId, "Id", "CategoryName", Model.Prices[i].VehicleCategoryId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "vehiclecategory", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].StartIlId, new SelectList(ViewBag.SehirId, "SehirId", "SehirAdi", Model.Prices[i].StartIlId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "startilid", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].StartIlceId, new SelectList(ViewBag.IlceId, "ilceId", "IlceAdi", Model.Prices[i].StartIlceId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "startilceid", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].StartSemtMahId, new SelectList(ViewBag.SemtMahId, "SemtMahId", "MahalleAdi", Model.Prices[i].StartSemtMahId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "startsemtmahid", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].EndIlId, new SelectList(ViewBag.SehirId, "SehirId", "SehirAdi", Model.Prices[i].EndIlId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "endilid", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].EndIlceId, new SelectList(ViewBag.IlceId, "ilceId", "IlceAdi", Model.Prices[i].EndIlceId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "endilceid", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Prices[i].EndtSemtMahId, new SelectList(ViewBag.SemtMahId, "SemtMahId", "MahalleAdi", Model.Prices[i].EndtSemtMahId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "endsemtmahid", data_bind = @Model.Prices[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text"
+                                                   readonly
+                                                   id="totalprice"
+                                                   data-id="@Model.Prices[i].Id"
+                                                   value="@Model.Prices[i].TotalPrice"
+                                                   asp-for="@Model.Prices[i].TotalPrice" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%;" />
+                                            </div>
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="@("#resultmodal" +Model.Prices[i].Id)" href="@("#resultmodal" +Model.Prices[i].Id)">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            View
+                                        </a>
+                                        <a id="editlist" class="btn btn-info btn-sm" data_bind="@Model.Prices[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a id="saveList" class="btn btn-info btn-sm" style="display:none;" data_bind="@Model.Prices[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Kaydet
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("DeletePrice","Rezervation", new { ID = Model.Prices[i].Id})">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@foreach (var rolemodal in (List<Price>)Model.Prices)
+{
+    <div class="modal fade bd-example-modal-lg" id="@("resultmodal" +rolemodal.Id)" tabindex="-1" role="dialog" aria-labelledby="instructionsLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Roller</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body ml-5">
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].Company) : @Model.Companies.Where(x => x.Id == rolemodal.CompanyId).First().CompanyName</p>
+                    @*<p>@Html.DisplayNameFor(model => model.Prices[0].VehicleCategory) : @Model.VehicleCategories.Where(x => x.Id == rolemodal.VehicleCategoryId).First().CategoryName</p>*@
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].StartIlId) : @Model.Sehirlers.Where(x=> x.SehirId == Convert.ToInt32(rolemodal.StartIlId)).First().SehirAdi</p>
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].StartIlceId) : @Model.Ilcelers.Where(x => x.ilceId == Convert.ToInt32(rolemodal.StartIlceId)).First().IlceAdi</p>
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].StartSemtMahId) : @Model.SemtMahs.Where(x => x.SemtMahId == Convert.ToInt32(rolemodal.StartSemtMahId)).First().SemtAdi</p>
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].EndIlId) : @Model.Sehirlers.Where(x => x.SehirId == Convert.ToInt32(rolemodal.EndIlId)).First().SehirAdi</p>
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].EndIlceId) : @Model.Ilcelers.Where(x => x.ilceId == Convert.ToInt32(rolemodal.EndIlceId)).First().IlceAdi</p>
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].EndtSemtMahId) : @Model.SemtMahs.Where(x=>x.SemtMahId == Convert.ToInt32(rolemodal.EndtSemtMahId)).First().MahalleAdi</p>
+                    <p>@Html.DisplayNameFor(model => model.Prices[0].TotalPrice) : @rolemodal.TotalPrice</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="modal fade bd-example-modal-lg" id="postmodel" tabindex="-1" role="dialog" aria-labelledby="instructionsLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Şehir Fiyatı Ekle</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body ml-12">
+                <div class="form-group col-lg-12">
+                    <div class="form-group">
+                        <label>Şirket :</label>
+                        @Html.DropDownList("CompanyId", new SelectList(ViewBag.CompanyId, "Id", "CompanyName", null), null, htmlAttributes: new { @class = "form-control", @id = "postcompany" })
+                    </div>
+                    <div class="form-group">
+                        <label>Şirket :</label>
+                        @Html.DropDownList("VehicleCategoryId", new SelectList(ViewBag.VehicleCategoryId, "Id", "CategoryName", null), null, htmlAttributes: new { @class = "form-control", @id = "postvehiclecategory" })
+                    </div>
+                    <div class="form-group">
+                        <label>Başlangıç İli :</label>
+                        @Html.DropDownList("SehirId", new SelectList(ViewBag.SehirId, "SehirId", "SehirAdi", null), "--- Başlangıç İl Seçiniz---", htmlAttributes: new { @class = "form-control", @id = "postsehir", @data_url = @Url.Action("GetLocationCity", "Rezervation") })
+                    </div>
+                    <div class="form-group">
+                        <label>Başlangıç İlçe :</label>
+                        @Html.DropDownList("IlceId", new SelectList(ViewBag.IlceId, "ilceId", "IlceAdi", null), "--- Başlangıç İlçe Seçiniz---", htmlAttributes: new { @class = "form-control", @id = "postilce", @data_url = @Url.Action("GetLocationRoute", "Rezervation"), @disabled = true })
+                    </div>
+                    <div class="form-group">
+                        <label>Başlangıç Nokta :</label>
+                        @Html.DropDownList("SemtMahId", new SelectList(ViewBag.SemtMahId, "SemtMahId", "SemtAdi", null), "--- Başlangıç Nokta Seçiniz---", htmlAttributes: new { @class = "form-control", @id = "postsemt", @disabled = true })
+                    </div>
+                    <div class="form-group">
+                        <label>Bitiş İli :</label>
+                        @Html.DropDownList("SehirId", new SelectList(ViewBag.SehirId, "SehirId", "SehirAdi", null), "--- Varış İl Seçiniz---", htmlAttributes: new { @class = "form-control", @id = "postendsehir", @data_url = @Url.Action("GetLocationCity", "Rezervation") })
+                    </div>
+                    <div class="form-group">
+                        <label>Bitiş İlçesi :</label>
+                        @Html.DropDownList("IlceId", new SelectList(ViewBag.IlceId, "ilceId", "IlceAdi", null), "--- Varış İlçe Seçiniz---", htmlAttributes: new { @class = "form-control", @id = "postendilce", @data_url = @Url.Action("GetLocationRoute", "Rezervation"), @disabled = true })
+                    </div>
+                    <div class="form-group">
+                        <label>Bitiş Noktası :</label>
+                        @Html.DropDownList("SemtMahId", new SelectList(ViewBag.SemtMahId, "SemtMahId", "SemtAdi", null), "--- Varış Nokta Seçiniz---", htmlAttributes: new { @class = "form-control", @id = "postendsemt", @disabled = true })
+                    </div>
+                    <div class="form-group">
+                        <label>Bitiş Noktası :</label>
+                        <input class="form-control" type="text" id="postprice" />
+                    </div>
+                </div>
+                <a id="postmodel" href="#" class="btn btn-primary float-right">Kaydet</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>$(function () {
+        $('#example').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true
+        });
+    });
+
+    $('a#editlist').on('click', function () {
+        var inputDataId = $(this).attr('data_bind');
+        debugger;
+        $(this).hide();
+        $("#saveList[data_bind='" + inputDataId + "']").show();
+        $("input[data-id='" + inputDataId + "']").removeAttr('readonly');
+        $("select[data-bind='" + inputDataId + "']").removeAttr('disabled');
+    });
+
+    $('a#saveList').on('click', function () {
+        debugger;
+        var inputDataId = $(this).attr('data_bind');
+        $(this).hide();
+        $("a#editlist[data_bind='" + inputDataId + "']").show();
+        $("select[data-bind='" + inputDataId + "']").attr('disabled', 'true');
+        $("input[data-id='" + inputDataId + "']").attr('readonly', 'readonly');
+        var company = $("select#company[data-bind='" + inputDataId + "']").val();
+        var vehiclecategory = $("select#vehiclecategory[data-bind='" + inputDataId + "']").val();
+        var startilid = $("select#startilid[data-bind='" + inputDataId + "']").val();
+        var startilceid = $("select#startilceid[data-bind='" + inputDataId + "']").val();
+        var startsemtmahid = $("select#startsemtmahid[data-bind='" + inputDataId + "']").val();
+        var endilid = $("select#endilid[data-bind='" + inputDataId + "']").val();
+        var endilceid = $("select#endilceid[data-bind='" + inputDataId + "']").val();
+        var endsemtmahid = $("select#endsemtmahid[data-bind='" + inputDataId + "']").val();
+        var totalprice = $("input#totalprice[data-id='" + inputDataId + "']").val();
+        $.post(location.origin + "/rezervation/priceedit", {
+            Id: inputDataId,
+            CompanyId: company,
+            PostVehicleCategory: vehiclecategory,
+            StartIlId: startilid,
+            StartIlceId: startilceid,
+            StartSemtMahId: startsemtmahid,
+            EndIlId: endilid,
+            EndIlceId: endilceid,
+            EndtSemtMahId: endsemtmahid,
+            TotalPrice: totalprice
+        }, function (data) {
+            if (data == "Başarılı!")
+                createAlert('', data, 'Düzenleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
+            else
+                createAlert('Hata', data, 'Düzenleme işlemi başarısız şekilde gerçekleşti', 'danger', true, false, 'pageMessages');
+        });
+    })
+
+    $('a#postmodel').on('click', function () {
+        debugger;
+        var postcompany = $("select#postcompany").val();
+        var postvehiclecategory = $("select#postvehiclecategory").val();
+        var postsehir = $("select#postsehir").val();
+        var postilce = $("select#postilce").val();
+        var postsemt = $("select#postsemt").val();
+        var postendsehir = $("select#postendsehir").val();
+        var postendilce = $("select#postendilce").val();
+        var postendsemt = $("select#postendsemt").val();
+        var postprice = $("input#postprice").val();
+        $.post(location.origin + "/rezervation/priceadd", {
+            CompanyId: postcompany,
+            PostVehicleCategory: postvehiclecategory,
+            StartIlId: postsehir,
+            StartIlceId: postilce,
+            StartSemtMahId: postsemt,
+            EndIlId: postendsehir,
+            EndIlceId: postendilce,
+            EndtSemtMahId: postendsemt,
+            TotalPrice: postprice,
+        }, function (data) {
+            if (data == "Başarılı!") {
+                createAlert('', data, 'Ekleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
+                location.reload();
+            }
+            else
+                createAlert('Hata', data, 'Ekleme işlemi başarısız şekilde gerçekleşti', 'danger', true, false, 'pageMessages');
+        });
+    })
+
+    $("#postsehir").change(function () {
+        $("#postilce").empty();
+        var v = $(this).val();
+        var url = $("#postsehir").data("url") + '?value=' + v;
+        $.getJSON(url, function (data) {
+            $("#postilce").empty();
+            $("#postilce").removeAttr("disabled");
+            $("#postilce").append('<option selected disabled value="">--- Başlangıç İlçe Seçiniz---</option>');
+            $.each(data, function (i, item) {
+                $("#postilce").append($("<option>").text(item.ilceAdi).val(item.ilceId));
+            });
+        });
+    });
+
+    $("#postilce").change(function () {
+        $("#postsemt").empty();
+        var val = $(this).val();
+        var url = $("#postilce").data("url") + '?value=' + val;
+        $.getJSON(url, function (data) {
+            ;
+            $("#postsemt").empty();
+            $("#postsemt").removeAttr("disabled");
+            $("#postsemt").append('<option selected disabled value="">--- Başlangıç Nokta Seçiniz ---</option>');
+            $.each(data, function (i, item) {
+                $("#postsemt").append($("<option>").text(item.mahalleAdi).val(item.semtMahId));
+            });
+            $("#postsemt").removeAttr("disabled");
+        });
+    });
+
+    $("#postendsehir").change(function () {
+        $("#postendilce").empty();
+        var v = $(this).val();
+        var url = $("#postendsehir").data("url") + '?value=' + v;
+        $.getJSON(url, function (data) {
+            $("#postendilce").empty();
+            $("#postendilce").removeAttr("disabled");
+            $("#postendilce").append('<option selected disabled value="">--- Varış İlçe Seçiniz ---</option>');
+            $.each(data, function (i, item) {
+                $("#postendilce").append($("<option>").text(item.ilceAdi).val(item.ilceId));
+            });
+        });
+    });
+
+    $("#postendilce").change(function () {
+        $("#postendsemt").empty();
+        var val = $(this).val();
+        var url = $("#postendilce").data("url") + '?value=' + val;
+        $.getJSON(url, function (data) {
+            $("#postendsemt").empty();
+            $("#postendsemt").removeAttr("disabled");
+            $("#postendsemt").append('<option selected disabled value="">--- Varış Nokta Seçiniz ---</option>');
+            $.each(data, function (i, item) {
+                $("#postendsemt").append($("<option>").text(item.mahalleAdi).val(item.semtMahId));
+            });
+        });
+    });</script>

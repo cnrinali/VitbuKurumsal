@@ -1,0 +1,51 @@
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/bin/Release/net6.0/Business.deps.json
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/bin/Release/net6.0/Business.dll
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/bin/Release/net6.0/Business.pdb
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/bin/Release/net6.0/DataAccess.dll
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/bin/Release/net6.0/Entities.dll
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/bin/Release/net6.0/DataAccess.pdb
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/bin/Release/net6.0/Entities.pdb
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.csproj.AssemblyReference.cache
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.AssemblyInfoInputs.cache
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.AssemblyInfo.cs
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.csproj.CoreCompileInputs.cache
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.csproj.CopyComplete
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.dll
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/ref/Business.dll
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/Business.pdb
+/Users/canerinali/Documents/Müşteriler/VitbuProject/Business/obj/Release/net6.0/refint/Business.dll
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/bin/Release/net6.0/Business.deps.json
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/bin/Release/net6.0/Business.dll
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/bin/Release/net6.0/Business.pdb
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/bin/Release/net6.0/DataAccess.dll
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/bin/Release/net6.0/Entities.dll
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/bin/Release/net6.0/DataAccess.pdb
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/bin/Release/net6.0/Entities.pdb
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.csproj.AssemblyReference.cache
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.AssemblyInfoInputs.cache
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.AssemblyInfo.cs
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.csproj.CoreCompileInputs.cache
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.csproj.CopyComplete
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.dll
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/refint/Business.dll
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/Business.pdb
+/Users/canerinali/Documents/Müşteriler/adsız klasör/Business/obj/Release/net6.0/ref/Business.dll
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\bin\Release\net6.0\Business.deps.json
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\bin\Release\net6.0\Business.dll
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\bin\Release\net6.0\Business.pdb
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\bin\Release\net6.0\DataAccess.dll
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\bin\Release\net6.0\Entities.dll
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\bin\Release\net6.0\DataAccess.pdb
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\bin\Release\net6.0\Entities.pdb
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.csproj.AssemblyReference.cache
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.AssemblyInfoInputs.cache
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.AssemblyInfo.cs
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.csproj.CopyComplete
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.dll
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\refint\Business.dll
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\Business.pdb
+C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\Business\obj\Release\net6.0\ref\Business.dll

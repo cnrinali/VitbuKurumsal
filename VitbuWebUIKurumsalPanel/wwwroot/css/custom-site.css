@@ -1,0 +1,80 @@
+﻿#pageMessages {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 30%;
+    z-index: 1000000000 !important;
+}
+
+.alert {
+    position: relative;
+}
+
+    .alert .close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 1em;
+    }
+
+    .alert .fa {
+        margin-right: .3em;
+    }
+
+.content-wrapper {
+    margin-left: auto !important;
+    margin-top: auto !important;
+}
+a.nav-link.dropdown-toggle {
+    color: black;
+}
+a.nav-link {
+    color: black !important;
+}
+ul.nav.nav-tabs {
+    margin: 1%;
+}
+
+.modal-dialog.modal-lg {
+    margin:0px !important;
+}
+
+td {
+    vertical-align: initial;
+}
+
+#postmodel > div > div > div.modal-body.ml-12 > div > table > tbody > tr > td > table > tbody > tr > td > label {
+    font-size: 12px;
+    font-weight: normal !important;
+}
+#postmodel .form-control {
+    height: auto !important;
+    padding: 0 0.75rem !important;
+}
+
+#postmodel > div > div > div.modal-body.ml-12 > div > table > tbody > tr > td {
+    padding-right: 8px;
+}
+
+.modal-dialog.modal-lg {
+    max-width: 80% !important;
+}
+
+#postcustomer > div {
+    margin: 1.75rem auto !important;
+}
+
+label {
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .modal-dialog.modal-lg {
+        max-width: 100% !important;
+    }
+}
+
+tbody#customer td {
+    padding-right: 20px;
+}

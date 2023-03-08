@@ -1,0 +1,25 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/assets/page/all.min.js",
+    "inputFiles": [
+      "wwwroot/assets/page/rezervation.js",
+      "wwwroot/assets/page/main.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/assets/css/all.min.css",
+    "inputFiles": [
+      "wwwroot/assets/css/allstyle.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

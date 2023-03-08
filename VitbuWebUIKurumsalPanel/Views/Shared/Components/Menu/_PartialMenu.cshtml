@@ -1,0 +1,32 @@
+﻿@model HomeViewModel
+@{
+    var mah = 0;
+}
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="/">Anasayfa</a>
+    </li>
+    @foreach (var item in Model.MenuCategories)
+    {
+        if (Model.Menus.Where(x => x.MenuCategoryId == item.Id && x.isDeleted != "false").ToList().Count > 0)
+        {
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="@item.StyleIcon" role="button" aria-haspopup="true" aria-expanded="false">@item.CategoryName</a>
+                <div class="dropdown-menu">
+                    @foreach (var menus in Model.Menus)
+                    {
+                        @if (item.Id == menus.MenuCategoryId)
+                        {
+                            mah++;
+                            <a class="dropdown-item" href="@menus.Url">@menus.Title</a>
+                        }
+                    }
+                </div>
+            </li>
+        }
+    }
+    <li class="nav-item" style="margin-left: auto;">
+        <a class="nav-link active" href="/Authorization/Signout">Çıkış</a>
+    </li>
+</ul>

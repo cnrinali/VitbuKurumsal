@@ -1,0 +1,404 @@
+﻿    @model SuperAdminRoleViewModel
+@{
+    int counts = 0;
+    int countsY = 0;
+    int money = 0;
+    int moneyY = 0;
+    int vehicleMoney = 0;
+    int vehicleMoneyY = 0;
+    double kdvsizY = 0;
+    double kdvsizM = 0;
+}
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <p class="p-rigth">
+                        Cari İşlemleri
+                    </p>
+                    <form asp-controller="Rezervation" asp-action="Cari" id="form1">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label>Şirket</label>
+                                        @Html.DropDownList("CompanyId", new SelectList(ViewBag.CompanyId, "Id", "CompanyName", null), "Tümü", htmlAttributes: new { @class = "form-control", @id = "postcompany" })
+                                    </div>
+                                    <div class="col-4">
+                                        <label>Ay Seçiniz</label>
+                                        <select id="valueStart" name="valueStart" class="form-control">
+                                            <option value="0">Tümü</option>
+                                            <option value="1">Ocak</option>
+                                            <option value="2">Şubat</option>
+                                            <option value="3">Mart</option>
+                                            <option value="4">Nisan</option>
+                                            <option value="5">Mayıs</option>
+                                            <option value="6">Haziran</option>
+                                            <option value="7">Temmuz</option>
+                                            <option value="8">Ağustos</option>
+                                            <option value="9">Eylül</option>
+                                            <option value="10">Ekim</option>
+                                            <option value="11">Kasım</option>
+                                            <option value="12">Aralık</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label>Yıl Seçiniz</label>
+                                        <select id="valueStartYear" name="valueStartYear" class="form-control">
+                                            <option value="0">Tümü</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1" style="margin-top:auto">
+                                        <button class="btn btn-primary float-right" type="submit" form="form1" value="Filtrele">Filtrele</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <table id="example" class="table table-striped table-bordered">
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table class="table table-striped table-bordered">
+                                        <tr>
+                                            <td>
+                                                <label>Aylık Toplam Rezervasyon</label>
+                                            </td>
+                                            @if (ViewBag.Rezervation.Count != 0)
+                                            {
+                                                <td>
+                                                    <label>
+                                                        @for (var i = 0; i < ViewBag.Rezervation.Count; i++)
+                                                        {
+                                                            counts++;
+                                                        }
+                                                        @counts Adet Rezervasyon
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label id="toplamAy">
+                                                        @for (var i = 0; i < ViewBag.Rezervation.Count; i++)
+                                                        {
+                                                            money += Int32.Parse(ViewBag.Rezervation[i].TotalPrice);
+                                                        }
+                                                        @money TL Toplam
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label id="odenenAy">
+                                                        @for (var i = 0; i < ViewBag.Rezervation.Count; i++)
+                                                            {
+                                                                    vehicleMoney += Int32.Parse(ViewBag.Rezervation[i].VehiclePrice);
+                                                            }
+                                                        @vehicleMoney TL Ödenen
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label id="kalanAy">
+                                                        @{
+                                                            int data = money - vehicleMoney;
+                                                        }@data TL Kalan
+                                                    </label>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    <label>
+                                                        0 Adet Rezervasyon
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label id="toplamAy">
+                                                        0 TL Toplam
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label id="odenenAy">
+                                                        0 TL Ödenen
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label id="kalanAy">
+                                                        0 TL Kalan
+                                                    </label>
+                                                </td>
+                                            }
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>Yıllık Toplam Rezervasyon</label>
+                                            </td>
+                                            @if (ViewBag.RezervationYear.Count != 0)
+                                            {
+                                                <td>
+                                                    <label>
+                                                        @for (var i = 0; i < ViewBag.RezervationYear.Count; i++)
+                                                        {
+                                                            countsY++;
+                                                        }
+                                                        @countsY Adet Rezervasyon
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        @for (var i = 0; i < ViewBag.RezervationYear.Count; i++)
+                                                        {
+                                                            moneyY += Int32.Parse(ViewBag.RezervationYear[i].TotalPrice);
+                                                        }
+                                                        @moneyY TL Toplam
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        @for (var i = 0; i < ViewBag.RezervationYear.Count; i++)
+                                                        {
+                                                            vehicleMoneyY += Int32.Parse(ViewBag.RezervationYear[i].VehiclePrice);
+                                                        }
+                                                        @vehicleMoneyY TL Ödenen
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        @{
+                                                            int dataY = moneyY - vehicleMoneyY;
+                                                            dataY.ToString();
+                                                        }
+                                                        @dataY TL Kalan
+                                                    </label>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    <label>
+                                                        0 Adet Rezervasyon
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        0 TL Toplam
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        0 TL Ödenen
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        0 TL Kalan
+                                                    </label>
+                                                </td>
+                                            }
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-group">
+                        <div class="row" style="margin-left:40%;margin-top:15px;">
+                            <table id="pricestable">
+                                <tr>
+                                    <td>
+                                        <table style="background-color: #f2f2f2;">
+                                            <tr>
+                                                <th>
+                                                    <label>Aylık</label>
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <label>Kdv :</label>
+                                                </td>
+                                                <td>
+                                                    <input class="form-control" type="text" value="18" disabled="disabled" />
+                                                </td>
+                                                <td>
+                                                    <label>%</label>
+                                                </td>
+                                            </tr>
+                                            @if (ViewBag.Rezervation.Count != 0)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <label>Ödenilen Kdv Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            @{
+                                                                kdvsizM += money / 1.18;
+                                                                kdvsizM = kdvsizM - money;
+                                                            } @kdvsizM.ToString().Trim('-')
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>Kdvsiz Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            @{
+                                                                kdvsizM += money / 1.18;
+                                                            } @kdvsizM.ToString().Trim('-')
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <label>Ödenilen Kdv Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            0
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>Kdvsiz Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            0
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table id="pricestable">
+                                <tr>
+                                    <td>
+                                        <table style="background-color: #f2f2f2;">
+                                            <tr>
+                                                <th>
+                                                    <label>Yıllık</label>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Kdv :</label>
+                                                </td>
+                                                <td>
+                                                    <input class="form-control" type="text" value="18" disabled="disabled" />
+                                                </td>
+                                                <td>
+                                                    <label>%</label>
+                                                </td>
+                                            </tr>
+                                            @if (ViewBag.RezervationYear.Count != 0)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <label>Ödenilen Kdv Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            @{
+                                                                kdvsizY += moneyY / 1.18;
+                                                                kdvsizY = kdvsizY - moneyY;
+                                                            } @kdvsizY.ToString().Split(".")[0].Trim('-').@kdvsizY.ToString().Split(",")[1].Substring(0,2)
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>Kdvsiz Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            @{
+                                                                kdvsizY += moneyY / 1.18;
+                                                            } @kdvsizY.ToString().Split(".")[0].Trim('-').@kdvsizY.ToString().Split(",")[1].Substring(0,2)
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <label>Ödenilen Kdv Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            0
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>Kdvsiz Fiyatı :</label>
+                                                    </td>
+                                                    <td>
+                                                        <label>
+                                                            0
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label>TL</label>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

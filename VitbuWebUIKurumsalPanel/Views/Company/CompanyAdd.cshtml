@@ -1,0 +1,71 @@
+﻿@model Company
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive p-2">
+                    <form asp-controller="Company" asp-action="CompanyAdd" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="TaxNumber"></label>
+                            <input asp-for="TaxNumber" class="form-control" />
+                            <span asp-validation-for="TaxNumber"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="TaxAdministration"></label>
+                            <input asp-for="TaxAdministration" class="form-control" />
+                            <span asp-validation-for="TaxAdministration"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CompanyName"></label>
+                            <input asp-for="CompanyName" class="form-control" />
+                            <span asp-validation-for="CompanyName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CompanyTitle"></label>
+                            <input asp-for="CompanyTitle" class="form-control" />
+                            <span asp-validation-for="CompanyTitle"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CompanyAddress"></label>
+                            <input asp-for="CompanyAddress" class="form-control" />
+                            <span asp-validation-for="CompanyAddress"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CompanyMail"></label>
+                            <input asp-for="CompanyMail" class="form-control" />
+                            <span asp-validation-for="CompanyMail"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CompanyPhone"></label>
+                            <input asp-for="CompanyPhone" class="form-control" />
+                            <span asp-validation-for="CompanyPhone"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AuthorizedPerson"></label>
+                            <input asp-for="AuthorizedPerson" class="form-control" />
+                            <span asp-validation-for="AuthorizedPerson"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AuthorizedPersonPhone"></label>
+                            <input asp-for="AuthorizedPersonPhone" class="form-control" />
+                            <span asp-validation-for="AuthorizedPersonPhone"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description"></label>
+                            <input asp-for="Description" class="form-control" />
+                            <span asp-validation-for="Description"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StatuId"></label>
+                            <input asp-for="StatuId" class="form-control" />
+                            <span asp-validation-for="StatuId"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a class="btn btn-danger float-right" asp-action="Index">Geri Dön</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

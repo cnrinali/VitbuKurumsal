@@ -1,0 +1,282 @@
+﻿@model SuperAdminRoleViewModel
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <p class="p-rigth">
+                        <a data-toggle="modal" data-target="#postmodel" href="#postmodel" class="btn btn-primary">
+                            <span class="fa fa-edit"> Yeni</span>
+                        </a>
+                    </p>
+                    <table id="example" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Menus[0].Id)</th>
+                                <th>@Html.DisplayNameFor(model => model.Menus[0].Title)</th>
+                                <th>@Html.DisplayNameFor(model => model.Menus[0].Url)</th>
+                                <th>@Html.DisplayNameFor(model => model.Menus[0].MenuCategory.CategoryName)</th>
+                                <th>@Html.DisplayNameFor(model => model.Menus[0].Descreption)</th>
+                                <th>@Html.DisplayNameFor(model => model.Menus[0].StatuId)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < Model.Menus.Count; i++)
+                            {
+                                <tr>
+                                    <td id="roleid">@Model.Menus[i].Id</td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="title"
+                                               data-id="@Model.Menus[i].Id"
+                                               value="@Model.Menus[i].Title"
+                                               asp-for="@Model.Menus[i].Title" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="url"
+                                               data-id="@Model.Menus[i].Id"
+                                               value="@Model.Menus[i].Url"
+                                               asp-for="@Model.Menus[i].Url" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%;" />
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(model => Model.Menus[i].MenuCategoryId, new SelectList(ViewBag.MenuCategoryId, "Id", "CategoryName", Model.Menus[i].MenuCategoryId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", @id = "category", data_bind = @Model.Menus[i].Id })
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="description"
+                                               data-id="@Model.Menus[i].Id"
+                                               value="@Model.Menus[i].Descreption"
+                                               asp-for="@Model.Menus[i].Descreption" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%;" />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="status"
+                                               data-id="@Model.Menus[i].Id"
+                                               value="@Model.Menus[i].StatuId"
+                                               asp-for="@Model.Menus[i].StatuId" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%;" />
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="@("#resultmodal" +Model.Menus[i].Id)" href="@("#resultmodal" +Model.Menus[i].Id)">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            View
+                                        </a>
+                                        <a id="editlist" class="btn btn-info btn-sm" data-id="@Model.Menus[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a id="saveList" class="btn btn-info btn-sm" style="display:none;" data-id="@Model.Menus[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Kaydet
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("DeleteMenu","AppRole", new { ID = Model.Menus[i].Id})">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@foreach (var rolemodal in (List<Menu>)Model.Menus)
+{
+    <div class="modal fade bd-example-modal-lg" id="@("resultmodal" +rolemodal.Id)" tabindex="-1" role="dialog" aria-labelledby="instructionsLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Roller</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body ml-5">
+                    <p>@Html.DisplayNameFor(model => model.Menus[0].Title) : @rolemodal.Title</p>
+                    <p>@Html.DisplayNameFor(model => model.Menus[0].Url) : @rolemodal.Url</p>
+                    <p>@Html.DisplayNameFor(model => model.Menus[0].MenuCategory) :  @Model.MenuCategories.Where(x => x.Id == rolemodal.MenuCategoryId).First().CategoryName</p>
+                    <p>@Html.DisplayNameFor(model => model.Menus[0].Descreption) : @Html.Raw(System.Web.HttpUtility.HtmlDecode(rolemodal.Descreption))
+                    <p>@Html.DisplayNameFor(model => model.Roles[0].StatuId) : @rolemodal.StatuId</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="modal fade bd-example-modal-lg" id="postmodel" tabindex="-1" role="dialog" aria-labelledby="instructionsLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Şirket Ekle</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body ml-12">
+                <div class="form-group col-lg-12">
+                    <div class="form-group">
+                        <label>Başlık :</label>
+                        <input class="form-control" type="text"
+                               id="posttitle" />
+                    </div>
+                    <div class="form-group">
+                        <label>Url :</label>
+                        <input class="form-control" type="text"
+                               id="posturl" />
+                    </div>
+                    <div class="form-group">
+                        <label>Menu Kategori :</label>
+                        @Html.DropDownList("MenuCategoryId", new SelectList(ViewBag.MenuCategoryId, "Id", "CategoryName", null), null, htmlAttributes: new { @class = "form-control", @id = "postcategory" })
+                    </div>
+                    <div class="form-group">
+                        <label>Açıklama :</label>
+                        <input class="form-control" type="text"
+                               id="postdescreption" />
+                    </div>
+                    <div class="form-group">
+                        <label>Statü :</label>
+                        <input class="form-control" type="text"
+                               id="poststatu" />
+                    </div>
+                </div>
+                <a id="postmodel" href="#" class="btn btn-primary float-right">Kaydet</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // Setup - add a text input to each footer cell
+        $('#example table thead')
+            .clone(true)
+            .addClass('filters')
+            .appendTo('#example thead');
+
+        var table = $('#example').DataTable({
+            orderCellsTop: true,
+            fixedHeader: true,
+            initComplete: function () {
+                var api = this.api();
+
+                // For each column
+                api
+                    .columns()
+                    .eq(0)
+                    .each(function (colIdx) {
+                        // Set the header cell to contain the input element
+                        var cell = $('.filters th').eq(
+                            $(api.column(colIdx).header()).index()
+                        );
+                        var title = $(cell).text();
+                        $(cell).html('<input type="text" placeholder="' + title + '" />');
+
+                        // On every keypress in this input
+                        $(
+                            'input',
+                            $('.filters th').eq($(api.column(colIdx).header()).index())
+                        )
+                            .off('keyup change')
+                            .on('change', function (e) {
+                                // Get the search value
+                                var data2 = $('#example thead tr:eq(0) th:eq(' + colIdx + ')').text();
+                                var data = $(this).attr('title', $(this).val());
+                                var regexr = '({search})'; //$(this).parents('th').find('select').val();
+
+                                var cursorPosition = this.selectionStart;
+                                // Search the column for that value
+                                api
+                                    .column()
+                                    .search(
+                                        this.value != ''
+                                            ? regexr.replace('{search}', '(((' + this.value + ')))')
+                                            : '',
+                                        this.value != '',
+                                        this.value == ''
+                                    )
+                                    .draw();
+                            })
+                            .on('keyup', function (e) {
+                                e.stopPropagation();
+
+                                $(this).trigger('change');
+                                $(this)
+                                    .focus()[0]
+                                    .setSelectionRange(cursorPosition, cursorPosition);
+                            });
+                    });
+            },
+        });
+    });
+    $('a#editlist').on('click', function () {
+        var inputDataId = $(this).data('id');
+        debugger;
+        $(this).hide();
+        $("#saveList[data-id='" + inputDataId + "']").show();
+        $("input[data-id='" + inputDataId + "']").removeAttr('readonly');
+        $("select[data-bind='" + inputDataId + "']").removeAttr('disabled');
+    });
+
+    $('a#saveList').on('click', function () {
+        debugger;
+        var inputDataId = $(this).data('id');
+        $(this).hide();
+        $("a#editlist[data-id='" + inputDataId + "']").show();
+        $("input[data-id='" + inputDataId + "']").attr('readonly', 'readonly');
+        $("select[data-bind='" + inputDataId + "']").attr('disabled', 'true');
+        var menuName = $("input#title[data-id='" + inputDataId + "']").val();
+        var menuCategory = $("select#category[data-bind='" + inputDataId + "']").val();
+        var url = $("input#url[data-id='" + inputDataId + "']").val();
+        var status = $("input#status[data-id='" + inputDataId + "']").val();
+        var description = $("input#description[data-id='" + inputDataId + "']").val();
+        $.post(location.origin + "/superadmin/menuedit", {
+            Id: inputDataId,
+            Title: menuName,
+            Url: url,
+            MenuCategoryId: menuCategory,
+            Descreption: description,
+        }, function (data) {
+            if (data == "Başarılı!")
+                createAlert('', data, 'Düzenleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
+            else
+                createAlert('Hata', data, 'Düzenleme işlemi başarısız şekilde gerçekleşti', 'danger', true, false, 'pageMessages');
+        });
+    })
+
+    $('a#postmodel').on('click', function () {
+        debugger;
+        var posttitle = $("input#posttitle").val();
+        var posturl = $("input#posturl").val();
+        var postcategory = $("select#postcategory").val();
+        var postdescreption = $("input#postdescreption").val();
+        var status = $("input#poststatu").val();
+        $.post(location.origin + "/superadmin/menumodaladd", {
+            Title: posttitle,
+            Url: posturl,
+            MenuCategoryId: postcategory,
+            Description: postdescreption,
+            StatuId: status
+        }, function (data) {
+            if (data == "Başarılı!") {
+                createAlert('', data, 'Ekleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
+                location.reload();
+            }
+            else
+                createAlert('Hata', data, 'Ekleme işlemi başarısız şekilde gerçekleşti', 'danger', true, false, 'pageMessages');
+        });
+    })</script>

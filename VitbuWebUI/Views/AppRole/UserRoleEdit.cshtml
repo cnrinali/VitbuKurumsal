@@ -1,0 +1,31 @@
+﻿@model UserRole
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body table-responsive p-2">
+                    <form enctype="multipart/form-data" asp-controller="AppRole" asp-action="RoleEdit" method="post">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                       <div class="form-group">
+                            @Html.LabelFor(model => model.UserId, "Kullanıcı")
+                            @Html.DropDownListFor(model => Model.UserId, new SelectList(ViewBag.UserId, "Id", "UserName",Model.UserId),null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.RoleId, "Role")
+                            @Html.DropDownListFor(model => Model.RoleId, new SelectList(ViewBag.RoleId, "Id", "RoleName",Model.RoleId),null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StatusId"></label>
+                            <input asp-for="StatusId" class="form-control" />
+                            <span asp-validation-for="StatusId"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                        <a class="btn btn-danger float-right" href="/superadmin/userrolelist">Geri Dön</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
