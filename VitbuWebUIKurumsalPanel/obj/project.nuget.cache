@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RuYGmkBP86GF5Rl+4NYUu5i0mN08iIYNOwxyw670lmOIMesSgypSFI2HpTo6LpoZMzUNq8orxzPnprNjPfEeOg==",
+  "dgSpecHash": "osjPwAZqtPppmrCXHafv9aKkX3Pb0eMbY7lhbMQzZd7Tz7X8/M69GdrzsDjTBU/fsQYNVxa2R9D4VdlcXr4b0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuProjesiSonHAl\\VitbuWebUIKurumsalPanel\\VitbuWebUIKurumsalPanel.csproj",
+  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuKurumsal\\VitbuKurumsal\\VitbuWebUIKurumsalPanel\\VitbuWebUIKurumsalPanel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

@@ -9,169 +9,169 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VitbuWebUIKurumsalPanel
 build_property.RootNamespace = VitbuWebUIKurumsalPanel
-build_property.ProjectDir = C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\VitbuWebUIKurumsalPanel\
+build_property.ProjectDir = C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUIKurumsalPanel\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Caner INALI\Desktop\VitbuProjesiSonHAl\VitbuWebUIKurumsalPanel
+build_property.MSBuildProjectDirectory = C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUIKurumsalPanel
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/MenuAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/MenuAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxNZW51QWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/MenuCategoryAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/MenuCategoryAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxNZW51Q2F0ZWdvcnlBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/MenuCategoryList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/MenuCategoryList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxNZW51Q2F0ZWdvcnlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/MenuList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/MenuList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxNZW51TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/RoleAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/RoleAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxSb2xlQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/RoleAuthorizationsAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/RoleAuthorizationsAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxSb2xlQXV0aG9yaXphdGlvbnNBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/RoleAuthorizationsList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/RoleAuthorizationsList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxSb2xlQXV0aG9yaXphdGlvbnNMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/RoleEdit.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/RoleEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxSb2xlRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/RoleList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/RoleList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxSb2xlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/TestRoleList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/TestRoleList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxUZXN0Um9sZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/UserRoleAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/UserRoleAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxVc2VyUm9sZUFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/UserRoleEdit.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/UserRoleEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxVc2VyUm9sZUVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/AppRole/UserRoleList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/AppRole/UserRoleList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZVxVc2VyUm9sZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Authorization/Login.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Authorization/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Company/CompanyAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Company/CompanyAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb21wYW55QWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Company/CompanyList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Company/CompanyList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb21wYW55TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Home/Index.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Home/Privacy.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Home/Profile.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Home/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Rezervation/Cari.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Rezervation/Cari.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cQ2FyaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Rezervation/Price.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Rezervation/Price.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cUHJpY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Rezervation/Rezervation.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Rezervation/Rezervation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cUmV6ZXJ2YXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Rezervation/RezervationAtama.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Rezervation/RezervationAtama.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cUmV6ZXJ2YXRpb25BdGFtYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Shared/Components/Menu/_PartialMenu.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Shared/Components/Menu/_PartialMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxfUGFydGlhbE1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Shared/Error.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Shared/_Layout.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Shared/_LayoutLogin.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Shared/_LayoutLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/User/UserAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/User/UserAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/User/UserList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/User/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleBrandAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleBrandAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlQnJhbmRBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleBrandList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleBrandList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlQnJhbmRMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleCategoryAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleCategoryAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlQ2F0ZWdvcnlBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleCategoryList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleCategoryList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleModelAdd.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleModelAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlTW9kZWxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleModelList.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/Vehicle/VehicleModelList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxWZWhpY2xlTW9kZWxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/_ViewImports.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Caner INALI/Desktop/VitbuProjesiSonHAl/VitbuWebUIKurumsalPanel/Views/_ViewStart.cshtml]
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUIKurumsalPanel/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "juzJQ4hdxRd2AAmoIaZg/+HYO2Zs79uqw3ChKZ20f0mDQXgyewzPRFjwbfyrtXpDOm+lnD0bHZBVr0+C1lTi9A==",
+  "dgSpecHash": "iEKVh05Cx0pZyz+u4+lCnuIwvlTKg0hVq8aFECJQL6Ikm6snNI1wm0vUCAHZ8ooYlXon2HW8tFQ2g9XU5Yx2HA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuProjesiSonHAl\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuKurumsal\\VitbuKurumsal\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

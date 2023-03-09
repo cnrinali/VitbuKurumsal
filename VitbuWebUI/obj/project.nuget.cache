@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8PEPoP3ObWOT143fWkiCk+93+t6qsL3hqwgN18bBmI4RCqblPCn3yF3G+hGlK4hpGCyNLPJZXB5ZEIl0+kcPcg==",
+  "dgSpecHash": "85qR8VQD9To1lIphLBjPqW7S4tQhR/D6LaSkbyIy/l0m/RIWYwvUmnEeEMa7LVxS6pDTpMv4hHLd/eIybsAjcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuProjesiSonHAl\\VitbuWebUI\\VitbuWebUIPartnerPanel.csproj",
+  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuKurumsal\\VitbuKurumsal\\VitbuWebUI\\VitbuWebUIPartnerPanel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

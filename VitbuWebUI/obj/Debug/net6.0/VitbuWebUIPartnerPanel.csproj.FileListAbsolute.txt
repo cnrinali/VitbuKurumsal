@@ -1143,3 +1143,14 @@ C:/Users/Caner INALI/Desktop/Masaüstü/Müşteriler/VitbuProject/VitbuWebUI/obj
 /Users/canerinali/Documents/Müşteriler/VitbuProject 2/VitbuWebUI/obj/Debug/net6.0/ref/VitbuWebUIPartnerPanel.dll
 /Users/canerinali/Documents/Müşteriler/VitbuProject 2/VitbuWebUI/obj/Debug/net6.0/VitbuWebUIPartnerPanel.pdb
 /Users/canerinali/Documents/Müşteriler/VitbuProject 2/VitbuWebUI/obj/Debug/net6.0/VitbuWebUIPartnerPanel.genruntimeconfig.cache
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.csproj.AssemblyReference.cache
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.AssemblyInfoInputs.cache
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.AssemblyInfo.cs
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.csproj.CoreCompileInputs.cache
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.RazorAssemblyInfo.cache
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.RazorAssemblyInfo.cs
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.dll
+C:\Users\Caner INALI\Desktop\VitbuKurumsal\VitbuKurumsal\VitbuWebUI\obj\Debug\net6.0\VitbuWebUIPartnerPanel.pdb

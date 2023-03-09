@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NApPriggCChR5zg4DtcSGK2JpqE+yOskFnKm3BSH3ainbH+E/xMpXac8AAw/b92jKO7XwOhGrfSNyGxh+Jh7mQ==",
+  "dgSpecHash": "neCUkd2KBIb0i8tG5UBCyRoc9vFl+ErCULmdys+ec4kOoI4DodVeANEVFenhkKPVCFRf+ZfLgj1Xqveh5qy2CQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuProjesiSonHAl\\Business\\Business.csproj",
+  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuKurumsal\\VitbuKurumsal\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

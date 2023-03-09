@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DPjfT0Lje5MBfu4neYUUv41pufJ17fIReRA9Zwls8b2VK0dido2VtVZLBBCKKO0QgJGj7XGCIZ0zy2IXQm+3ew==",
+  "dgSpecHash": "FTiT0LTU6mZo4s1ZWmSLV6CuejOobcXKTM/vBf6vTdj/tLrTdjGB7CGCPU5YlGWXQvA9Q2jKNYiHuCKcHBhaHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuProjesiSonHAl\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\Caner INALI\\Desktop\\VitbuKurumsal\\VitbuKurumsal\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\Caner INALI\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
