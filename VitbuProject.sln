@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{52457BB9-B617-4647-88D4-37EB5C74AA2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitbuWebUIKurumsalPanel", "VitbuWebUIKurumsalPanel\VitbuWebUIKurumsalPanel.csproj", "{CEED9DEC-2589-4285-982D-847824A0080D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VitbuWebUIKurumsalPanel", "VitbuWebUIKurumsalPanel\VitbuWebUIKurumsalPanel.csproj", "{CEED9DEC-2589-4285-982D-847824A0080D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6A41904-61BF-49AC-81A3-1D595844E546}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
