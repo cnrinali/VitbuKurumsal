@@ -24,7 +24,7 @@
                                 <th>@Html.DisplayNameFor(model => model.Users[0].UserName)</th>
                                 <th>@Html.DisplayNameFor(model => model.Users[0].Password)</th>
                                 <th>@Html.DisplayNameFor(model => model.Users[0].Company)</th>
-                                <th>@Html.DisplayNameFor(model => model.Users[0].StatusId)</th>
+                                <th>@Html.DisplayNameFor(model => model.Users[0].StatuId)</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -105,10 +105,10 @@
                                     <td>
                                         <input type="text"
                                                readonly
-                                               id="StatusId"
+                                               id="StatuId"
                                                data-id="@Model.Users[i].Id"
-                                               value="@Model.Users[i].StatusId"
-                                               asp-for="@Model.Users[i].StatusId" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                               value="@Model.Users[i].StatuId"
+                                               asp-for="@Model.Users[i].StatuId" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
                                     </td>
                                     <td class="project-actions text-right">
                                         <a class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="@("#resultmodal" +Model.Users[i].Id)" href="@("#resultmodal" +Model.Users[i].Id)">
@@ -165,7 +165,7 @@
                     <p>@Html.DisplayNameFor(model => model.Users[0].UserName) : @rolemodal.UserName</p>
                     <p>@Html.DisplayNameFor(model => model.Users[0].Password) : @rolemodal.Password</p>
                     <p>@Html.DisplayNameFor(model => model.UserRoles[0].User) : @Model.Companies.Where(x => x.Id == rolemodal.CompanyId).First().CompanyName</p>
-                    <p>@Html.DisplayNameFor(model => model.Users[0].StatusId) : @rolemodal.StatusId</p>
+                    <p>@Html.DisplayNameFor(model => model.Users[0].StatuId) : @rolemodal.StatuId</p>
                 </div>
             </div>
         </div>
@@ -278,7 +278,7 @@
         var Password = $("input#Password[data-id='" + inputDataId + "']").val();
         var CompanyId = $("select#CompanyId[data-bind='" + inputDataId + "']").val();
         var Description = $("input#Description[data-id='" + inputDataId + "']").val();
-        var StatusId = $("input#StatusId[data-id='" + inputDataId + "']").val();
+        var StatuId = $("input#StatuId[data-id='" + inputDataId + "']").val();
         $.post(location.origin + "/useredit", {
             Id: inputDataId,
             Name: Name,
@@ -291,7 +291,7 @@
             Password: Password,
             CompanyId: CompanyId,
             Description: Description,
-            StatusId: StatusId,
+            StatuId: StatuId,
         }, function (data) {
             if (data == "Başarılı!")
                 createAlert('', data, 'Düzenleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
@@ -323,7 +323,7 @@
             Password: postpassword,
             CompanyId: postcompany,
             Description: postdescreption,
-            StatusId: status
+            StatuId: status
         }, function (data) {
             if (data == "Başarılı!") {
                 createAlert('', data, 'Ekleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');

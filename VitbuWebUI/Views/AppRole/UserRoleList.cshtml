@@ -17,7 +17,7 @@
                                 <th>@Html.DisplayNameFor(model => model.UserRoles[0].Id)</th>
                                 <th>@Html.DisplayNameFor(model => model.UserRoles[0].User.UserName)</th>
                                 <th>@Html.DisplayNameFor(model => model.UserRoles[0].Role.RoleName)</th>
-                                <th>@Html.DisplayNameFor(model => model.UserRoles[0].StatusId)</th>
+                                <th>@Html.DisplayNameFor(model => model.UserRoles[0].StatuId)</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -36,7 +36,7 @@
                                             @Html.DropDownListFor(model => Model.UserRoles[i].RoleId, new SelectList(ViewBag.RoleId, "Id", "RoleName", Model.UserRoles[i].RoleId), null, htmlAttributes: new { @class = "form-control", @disabled = "true", id = "role", data_bind = @Model.UserRoles[i].Id })
                                         </div>
                                     </td>
-                                    <td>@Model.UserRoles[i].StatusId</td>
+                                    <td>@Model.UserRoles[i].StatuId</td>
                                     <td class="project-actions text-right">
                                         <a class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="@("#resultmodal" +Model.UserRoles[i].Id)" href="@("#resultmodal" +Model.UserRoles[i].Id)">
                                             <i class="fas fa-folder">
@@ -84,8 +84,8 @@
                 </div>
                 <div class="modal-body ml-5">
                     <p>@Html.DisplayNameFor(model => model.UserRoles[0].User) : @Model.Users.Where(x => x.Id == rolemodal.UserId).First().UserName</p>
-                    <p>@Html.DisplayNameFor(model => model.UserRoles[0].StatusId) : @Model.Roles.Where(x => x.Id == rolemodal.RoleId).First().RoleName</p>
-                    <p>@Html.DisplayNameFor(model => model.UserRoles[0].StatusId) : @rolemodal.StatusId</p>
+                    <p>@Html.DisplayNameFor(model => model.UserRoles[0].StatuId) : @Model.Roles.Where(x => x.Id == rolemodal.RoleId).First().RoleName</p>
+                    <p>@Html.DisplayNameFor(model => model.UserRoles[0].StatuId) : @rolemodal.StatuId</p>
                 </div>
             </div>
         </div>
@@ -166,7 +166,7 @@
         $.post(location.origin + "/superadmin/userrolemodaladd", {
             RoleId: roleName,
             UserId: userName,
-            StatusId: status
+            StatuId: status
         }, function (data) {
             if (data == "Başarılı!") {
                 createAlert('', data, 'Ekleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');

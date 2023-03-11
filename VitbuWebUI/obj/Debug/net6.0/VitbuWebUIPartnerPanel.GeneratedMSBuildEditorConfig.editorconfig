@@ -72,6 +72,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Company/CompanyAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb21wYW55QWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Company/CompanyList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDb21wYW55TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -82,6 +90,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Home/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Rezervation/Cari.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cQ2FyaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Rezervation/Price.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cUHJpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Rezervation/Rezervation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cUmV6ZXJ2YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Rezervation/RezervationAtama.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXRpb25cUmV6ZXJ2YXRpb25BdGFtYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Caner INALI/Desktop/VitbuKurumsal/VitbuKurumsal/VitbuWebUI/Views/Shared/Components/Menu/_PartialMenu.cshtml]

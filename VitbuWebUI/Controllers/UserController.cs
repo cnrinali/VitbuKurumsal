@@ -6,7 +6,7 @@ using Business.Abstract;
 using Entities.Abstract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using VitbuWebUIPartnerPanel.Models;
+using VitbuWebUIKurumsalPanel.Models;
 
 namespace VitbuWebUIKurumsalPanel.Controllers
 {

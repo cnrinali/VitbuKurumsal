@@ -7,9 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using VitbuWebUIPartnerPanel.Models;
+using VitbuWebUIKurumsalPanel.Models;
 
-namespace VitbuWebUIPartnerPanel.Controllers
+namespace VitbuWebUIKurumsalPanel.Controllers
 {
     [AllowAnonymous]
     public class AuthorizationController : Controller
@@ -38,7 +38,7 @@ namespace VitbuWebUIPartnerPanel.Controllers
             {
                 var user = _userService.Login(loginVM.UserName, loginVM.Password);
                 var companyPartner = _companyService.GetList(x => x.Id == user.CompanyId);
-                if (user != null && companyPartner[0].CompanyType == "Partner")
+                if (user != null && companyPartner[0].CompanyType == "Bussines" || companyPartner[0].CompanyType == "Admin")
                 {
                     var claims = new List<Claim>
                     {

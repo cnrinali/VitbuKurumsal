@@ -1,0 +1,348 @@
+﻿@model SuperAdminRoleViewModel
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <p class="p-rigth">
+                        <a data-toggle="modal" data-target="#postmodel" href="#postmodel" class="btn btn-primary">
+                            <span class="fa fa-edit"> Yeni</span>
+                        </a>
+                    </p>
+                    <table id="example" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th data-toggle="true">@Html.DisplayNameFor(model => model.Companies[0].Id)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].TaxNumber)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].TaxAdministration)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].CompanyName)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].CompanyTitle)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].CompanyAddress)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].CompanyPhone)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].CompanyMail)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].AuthorizedPerson)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].AuthorizedPersonPhone)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].Description)</th>
+                                <th>@Html.DisplayNameFor(model => model.Companies[0].CompanyType)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < Model.Companies.Count; i++)
+                            {
+                                <tr>
+                                    <td>@Model.Companies[i].Id</td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="TaxNumber"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].TaxNumber"
+                                           asp-for="@Model.Companies[i].TaxNumber" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="TaxAdministration"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].TaxAdministration"
+                                           asp-for="@Model.Companies[i].TaxAdministration" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="CompanyName"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].CompanyName"
+                                           asp-for="@Model.Companies[i].CompanyName" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="CompanyTitle"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].CompanyTitle"
+                                           asp-for="@Model.Companies[i].CompanyTitle" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="CompanyAddress"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].CompanyAddress"
+                                           asp-for="@Model.Companies[i].CompanyAddress" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="CompanyMail"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].CompanyMail"
+                                           asp-for="@Model.Companies[i].CompanyMail" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="CompanyPhone"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].CompanyPhone"
+                                           asp-for="@Model.Companies[i].CompanyPhone" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="AuthorizedPerson"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].AuthorizedPerson"
+                                           asp-for="@Model.Companies[i].AuthorizedPerson" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="AuthorizedPersonPhone"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].AuthorizedPersonPhone"
+                                           asp-for="@Model.Companies[i].AuthorizedPersonPhone" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="Description"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].Description"
+                                           asp-for="@Model.Companies[i].Description" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               readonly
+                                               id="CompanyType"
+                                               data-id="@Model.Companies[i].Id"
+                                           value="@Model.Companies[i].CompanyType"
+                                           asp-for="@Model.Companies[i].CompanyType" style="background: none; color: black; background-color: transparent; border: 0px solid; width: 100%; height: 100%; " />
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="@("#resultmodal" + Model.Companies[i].Id)" href="@("#resultmodal" +Model.Companies[i].Id)">
+                                            <i class="fas fa-folder">
+                                            </i>
+                                            View
+                                        </a>
+                                        <a id="editlist" class="btn btn-info btn-sm" data_bind="@Model.Companies[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Edit
+                                        </a>
+                                        <a id="saveList" class="btn btn-info btn-sm" style="display:none;" data_bind="@Model.Companies[i].Id">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Kaydet
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="@Url.Action("DeleteCompany","Company", new { ID = Model.Companies[i].Id})">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+@foreach (var rolemodal in (List<Company>)Model.Companies)
+{
+    <div class="modal fade bd-example-modal-lg" id="@("resultmodal" +rolemodal.Id)" tabindex="-1" role="dialog" aria-labelledby="instructionsLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Roller</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body ml-5">
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].TaxNumber) : @rolemodal.TaxNumber</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].TaxAdministration) : @rolemodal.TaxAdministration</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].CompanyName) : @rolemodal.CompanyName</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].CompanyTitle) : @rolemodal.CompanyTitle</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].CompanyAddress) : @rolemodal.CompanyAddress</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].CompanyPhone) : @rolemodal.CompanyPhone</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].CompanyMail) : @rolemodal.CompanyMail</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].AuthorizedPerson) : @rolemodal.AuthorizedPerson</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].AuthorizedPersonPhone) : @rolemodal.AuthorizedPersonPhone</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].Description) : @rolemodal.Description</p>
+                    <p>@Html.DisplayNameFor(model => model.Companies[0].CompanyType) : @rolemodal.CompanyType</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="modal fade bd-example-modal-lg" id="postmodel" tabindex="-1" role="dialog" aria-labelledby="instructionsLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Şirket Ekle</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body ml-12">
+                <div class="form-group col-lg-12">
+                    <div class="form-group">
+                        <label>Vergi No :</label>
+                        <input class="form-control" type="text"
+                               id="posttax" />
+                    </div>
+                    <div class="form-group">
+                        <label>Vegi Yönetici :</label>
+                        <input class="form-control" type="text"
+                               id="posttaxadmin" />
+                    </div>
+                    <div class="form-group">
+                        <label>Şirket Adı :</label>
+                        <input class="form-control" type="text"
+                               id="postcompany" />
+                    </div>
+                    <div class="form-group">
+                        <label>Şirket Başlığı :</label>
+                        <input class="form-control" type="text"
+                               id="postcompanytitle" />
+                    </div>
+                    <div class="form-group">
+                        <label>Şirket Adresi :</label>
+                        <input class="form-control" type="text"
+                               id="postcompanyadres" />
+                    </div>
+                    <div class="form-group">
+                        <label>Şirket Telefon :</label>
+                        <input class="form-control" type="text"
+                               id="postcompanyphone" />
+                    </div>
+                    <div class="form-group">
+                        <label>Şirket Mail :</label>
+                        <input class="form-control" type="text"
+                               id="postcompanymail" />
+                    </div>
+                    <div class="form-group">
+                        <label>Yetkili Personel :</label>
+                        <input class="form-control" type="text"
+                               id="postauthorizedperson" />
+                    </div>
+                    <div class="form-group">
+                        <label>Yetkili Personel Telefon :</label>
+                        <input class="form-control" type="text"
+                               id="postauthorizedpersonphone" />
+                    </div>
+                    <div class="form-group">
+                        <select id="postCompanyType" name="CompanyType" class="form-control">
+                            <option value="Bussines">Müşteri</option>
+                            <option value="Partner">Partner</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Açıklama :</label>
+                        <input class="form-control" type="text"
+                               id="postdescreption" />
+                    </div>
+                </div>
+                <a id="postmodel" href="#" class="btn btn-primary float-right">Kaydet</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#example').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true,
+            "scrollX": true
+        });
+    });
+
+    $('a#editlist').on('click', function () {
+        var inputDataId = $(this).attr('data_bind');
+        debugger;
+        $(this).hide();
+        $("#saveList[data_bind='" + inputDataId + "']").show();
+        $("input[data-id='" + inputDataId + "']").removeAttr('readonly');
+    });
+
+    $('a#saveList').on('click', function () {
+        var inputDataId = $(this).attr('data_bind');
+        $(this).hide();
+        $("a#editlist[data_bind='" + inputDataId + "']").show();
+        $("input[data-id='" + inputDataId + "']").attr('readonly', 'readonly');
+        var TaxNumber = $("input#TaxNumber[data-id='" + inputDataId + "']").val();
+        var TaxAdministration = $("input#TaxAdministration[data-id='" + inputDataId + "']").val();
+        var CompanyName = $("input#CompanyName[data-id='" + inputDataId + "']").val();
+        var CompanyTitle = $("input#CompanyTitle[data-id='" + inputDataId + "']").val();
+        var CompanyAddress = $("input#CompanyAddress[data-id='" + inputDataId + "']").val();
+        var CompanyPhone = $("input#CompanyPhone[data-id='" + inputDataId + "']").val();
+        var CompanyMail = $("input#CompanyMail[data-id='" + inputDataId + "']").val();
+        var AuthorizedPerson = $("input#AuthorizedPerson[data-id='" + inputDataId + "']").val();
+        var AuthorizedPersonPhone = $("input#AuthorizedPersonPhone[data-id='" + inputDataId + "']").val();
+        var Description = $("input#Description[data-id='" + inputDataId + "']").val();
+        var CompanyType = $("input#CompanyType[data-id='" + inputDataId + "']").val();
+        $.post(location.origin + "/company/companyedit", {
+            Id: inputDataId,
+            TaxNumber: TaxNumber,
+            TaxAdministration: TaxAdministration,
+            CompanyName: CompanyName,
+            CompanyTitle: CompanyTitle,
+            CompanyAddress: CompanyAddress,
+            CompanyPhone: CompanyPhone,
+            CompanyMail: CompanyMail,
+            AuthorizedPerson: AuthorizedPerson,
+            AuthorizedPersonPhone: AuthorizedPersonPhone,
+            Description: Description,
+            CompanyType: CompanyType,
+        }, function (data) {
+            if (data == "Başarılı!")
+                createAlert('', data, 'Düzenleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
+            else
+                createAlert('Hata', data, 'Düzenleme işlemi başarısız şekilde gerçekleşti', 'danger', true, false, 'pageMessages');
+        });
+    })
+    $('a#postmodel').on('click', function () {
+        debugger;
+        var posttax = $("input#posttax").val();
+        var posttaxadmin = $("input#posttaxadmin").val();
+        var postcompany = $("input#postcompany").val();
+        var postcompanytitle = $("input#postcompanytitle").val();
+        var postcompanyadres = $("input#postcompanyadres").val();
+        var postcompanyphone = $("input#postcompanyphone").val();
+        var postcompanymail = $("input#postcompanymail").val();
+        var postauthorizedperson = $("input#postauthorizedperson").val();
+        var postauthorizedpersonphone = $("input#postauthorizedpersonphone").val();
+        var postdescreption = $("input#postdescreption").val();
+        var postCompanyType = $("input#postCompanyType").val();
+        $.post(location.origin + "/company/companymodaladd", {
+            TaxNumber: posttax,
+            TaxAdministration: posttaxadmin,
+            CompanyName: postcompany,
+            CompanyTitle: postcompanytitle,
+            CompanyAddress: postcompanyadres,
+            CompanyPhone: postcompanyphone,
+            CompanyMail: postcompanymail,
+            AuthorizedPerson: postauthorizedperson,
+            AuthorizedPersonPhone: postauthorizedpersonphone,
+            Description: postdescreption,
+            CompanyType: postCompanyType
+        }, function (data) {
+            if (data == "Başarılı!") {
+                createAlert('', data, 'Ekleme işlemi başarılı şekilde gerçekleşti', 'success', true, true, 'pageMessages');
+                location.reload();
+            }
+            else
+                createAlert('Hata', data, 'Ekleme işlemi başarısız şekilde gerçekleşti', 'danger', true, false, 'pageMessages');
+        });
+    })</script>

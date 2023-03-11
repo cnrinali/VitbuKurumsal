@@ -6,7 +6,7 @@ using Business.Abstract;
 using Entities.Abstract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using VitbuWebUIPartnerPanel.Models;
+using VitbuWebUIKurumsalPanel.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

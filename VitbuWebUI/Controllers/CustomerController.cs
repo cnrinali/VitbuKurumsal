@@ -6,7 +6,7 @@ using System.Linq;
 using System;
 using System.Security.Claims;
 using System.Collections.Generic;
-using VitbuWebUIPartnerPanel.Models;
+using VitbuWebUIKurumsalPanel.Models;
 
 namespace VitbuWebUIKurumsalPanel.Controllers
 {
@@ -25,7 +25,7 @@ namespace VitbuWebUIKurumsalPanel.Controllers
         {
             SuperAdminRoleViewModel model = new SuperAdminRoleViewModel()
             {
-                Customers = _customerService.GetAll().Where(x=>x.isDeleted != "false").ToList()
+                Customers = _customerService.GetAll().Where(x => x.isDeleted != "false").ToList()
             };
             return View(model);
         }
@@ -55,7 +55,8 @@ namespace VitbuWebUIKurumsalPanel.Controllers
                 Sms = "true",
                 Telefon = customer.Telefon,
                 Uyruk = customer.Uyruk,
-                StatusId = "1"
+                RezervationId = customer.RezervationId,
+                StatuId = customer.StatuId
             };
             if (!ModelState.IsValid)
                 return Ok("Başarısız!");
@@ -67,7 +68,14 @@ namespace VitbuWebUIKurumsalPanel.Controllers
         public IActionResult DeleteCustomer(Guid id)
         {
             var entity = _customerService.GetById(id);
-
+            var removeUser = _userService.GetList(x => x.CompanyId == id).Where(x => x.isDeleted != "false").ToList();
+            if (removeUser != null)
+            {
+                foreach (var item in removeUser)
+                {
+                    _userService.Delete(item);
+                }
+            }
             if (entity != null)
             {
                 _customerService.Delete(entity);
